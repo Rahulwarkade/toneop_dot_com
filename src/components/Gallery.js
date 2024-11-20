@@ -1,44 +1,56 @@
-import React from "react";
 import Image from "next/image";
-import kiku from "../../public/kiku.png";
-import raghav from "../../public/raghav.png";
-import milind from "../../public/milind.jpeg";
+import kikuCare from "../../public/kikuCare.png";
+import raghavEats from "../../public/raghavEats.png";
+import milindFit from "../../public/milindFit.png";
 
 const Gallery = () => {
   return (
     <>
-      <section className="w-full flex items-center justify-center">
-        <div className="w-[1113px] h-[654px]  flex items-center justify-end">
-
-          <div className="container ml-10 w-[261px] h-[654px]  rounded-[20px] overflow-hidden relative">
-            <Image
-              src={kiku}
+      <section className="w-full flex items-center justify-end gap-10">
+        <div className="w-[261px] h-[654px] hover:w-[551px] flex items-center justify-end relative duration-500 ease-linear">
+          <div  className="w-[261px] h-[654px] hover:w-[551px] duration-500 ease-linear rounded-[20px] overflow-hidden absolute  right-0">
+            <Image 
+              src={kikuCare}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               alt="loading"
               priority={100}
-              className="gallery"
+              style={{
+                objectFit:"cover"
+              }}
+              className="hover:scale-110 duration-500 ease-linear"
             />
           </div>
-          <div className="container ml-10 w-[250px] h-[654px] rounded-[20px] overflow-hidden relative bg-[#F9F9F9]">
-            <Image
-              src={raghav}
+          </div>
+          <div className="w-[261px] h-[654px] hover:w-[551px] bg-[#F9F9F9] flex items-center justify-end relative duration-500 ease-linear rounded-[20px] overflow-hidden">
+          <div  className="w-[261px] h-[654px] hover:w-[551px] duration-500 ease-linear rounded-[20px] overflow-hidden absolute  right-0">
+            <Image 
+              src={raghavEats}
+              fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               alt="loading"
               priority={100}
-              className="gallery"
+              style={{
+                objectFit:"cover"
+              }}
+              className="hover:scale-110 duration-500 ease-linear"
             />
           </div>
-          <div className="container ml-10 w-[250px] h-[654px]  rounded-[20px] overflow-hidden relative">
-            <Image
-              src={milind}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              </div>
+              <div className="w-[261px] h-[654px] hover:w-[551px] duration-500 ease-linear flex items-center justify-end relative">
+          <div  className="w-[261px] h-[654px] hover:w-[551px] duration-500 ease-linear rounded-[20px] overflow-hidden absolute  right-0">
+            <Image 
+              src={milindFit}
+              fill
               alt="loading"
               priority={100}
-              className="gallery"
+              style={{
+                objectFit:"cover"
+              }}
+              className="hover:scale-110 duration-500 ease-linear"
             />
           </div>
-        </div>
+          </div>
       </section>
     </>
   );
