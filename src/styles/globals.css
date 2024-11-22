@@ -11,3 +11,19 @@ html,body{
   width : 100%;
   height : 100%;
 }
+
+.show-black-box:hover .black-box{
+  width:203px;
+  background-color : #222222;
+}
+.show-black-box:hover .black-text{
+  display:flex;
+  transform : rotate(90deg);
+}
+.show-black-box:hover .white-text{
+  display : none;
+}
+
+.show-black-box:hover .transparent-box{
+  transform : translateX(0px);
+}
