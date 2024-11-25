@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 *{
   margin : 0;
   padding : 0;
@@ -14,32 +12,128 @@ html,body{
   height : 100%;
 }
 
-.gallery{
-  object-fit: cover;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.show-black-box:hover .black-box{
+  width:203px;
+  background-color : #222222;
+}
+.show-black-box:hover .black-text{
+  display:flex;
+  transform : rotate(90deg);
+}
+.show-black-box:hover .white-text{
+  display : none;
 }
 
-.gallery:hover{
-  animation-name: show;
-  animation-duration: 0s;
-  animation-fill-mode: forwards;
+.show-black-box:hover .transparent-box{
+  transform : translateX(0px);
 }
 
-.container:hover{
-  animation-name: show;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  transition-timing-function: linear;
+.clip{
+  clip-path: polygon(0 0, 26% 0, 30% 24%, 100% 24%, 100% 100%, 0 100%);
 }
 
-@keyframes show{
-  from{
-    right: 0%;
+.eclipsOne{
+  animation-name : spin;
+  animation-duration : 10s;
+  animation-delay : 100ms;
+  animation-direction : alternate;
+  animation-iteration-count: infinite;
+}
+
+.eclipsTwo{
+  animation-name : spinEclipsTwo;
+  animation-duration : 10s;
+  animation-delay : 100ms;
+  animation-direction : alternate;
+  animation-iteration-count: infinite;
+}
+
+.eclipsThree{
+  animation-name : spinEclipsThree;
+  animation-duration : 10s;
+  animation-delay : 100ms;
+  animation-direction : alternate;
+  animation-iteration-count: infinite;
+}
+
+.eclipsOneRes{
+  animation-name : spinRes;
+  animation-duration : 10s;
+  animation-delay : 100ms;
+  animation-direction : alternate;
+  animation-iteration-count: infinite;
+}
+.eclipsTwoRes{
+  animation-name : spinEclipsTwoRes;
+  animation-duration : 10s;
+  animation-delay : 100ms;
+  animation-direction : alternate;
+  animation-iteration-count: infinite;
+}
+.eclipsThreeRes{
+  animation-name : spinEclipsThreeRes;
+  animation-duration : 10s;
+  animation-delay : 100ms;
+  animation-direction : alternate;
+  animation-iteration-count: infinite;
+}
+@keyframes spin{
+  0%{
+    transform : rotate(0deg);
   }
-  to{
-    width: 450px;
-    object-fit: cover;
+  100%{
+    transform : rotate(-360deg) scale(0.5) ;
+    left : -310px;
+    top : 233px;
+  }
+}
+@keyframes spinRes{
+  0%{
+    transform : rotate(0deg);
+  }
+  100%{
+    transform : rotate(360deg) scale(0.5) ;
+    left : 200px;
+    top : 380px;
+  }
+}
+@keyframes spinEclipsTwo{
+  0%{
+    transform : rotate(0deg);
+  }
+  100%{
+    transform : rotate(-360deg);
+    left : 700px;
+    top : -172px;
+  }
+}
+@keyframes spinEclipsTwoRes{
+  0%{
+    transform : rotate(0deg);
+  }
+  100%{
+    transform : rotate(-360deg);
+    left : 20px;
+    bottom : 1px;
+  }
+}
+@keyframes spinEclipsThree{
+  0%{
+    transform : rotate(0deg);
+  }
+  100%{
+    transform : rotate(-360deg) scale(1.8) ;
+    left : 1209px;
+    top : 142px;
+  }
+}
+@keyframes spinEclipsThreeRes{
+  0%{
+    transform : rotate(0deg);
+  }
+  100%{
+    transform : rotate(-360deg) scale(1.5) ;
+    left : 170px;
+    top: -150px;
   }
 }
